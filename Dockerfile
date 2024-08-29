@@ -1,6 +1,5 @@
 FROM ubuntu:22.04
 ENV TARGETARCH="linux-x64"
-LABEL version="1.0.0"
 
 # Also can be "linux-arm", "linux-arm64".
 

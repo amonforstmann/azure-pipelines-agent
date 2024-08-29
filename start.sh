@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+# Start the Docker daemon in the background
+print_header "Starting Docker daemon..."
+dockerd &
+
 if [ -z "${AZP_URL}" ]; then
   echo 1>&2 "error: missing AZP_URL environment variable"
   exit 1

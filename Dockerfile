@@ -2,13 +2,11 @@ FROM ubuntu:22.04
 ENV TARGETARCH="linux-x64"
 # Also can be "linux-arm", "linux-arm64".
 
-RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get install -y curl git jq libicu70 build-essential
-
 RUN apt-get update && \
-    apt-get install ca-certificates curl && \
-    install -m 0755 -d /etc/apt/keyrings && \
+    apt-get upgrade -y && \
+    apt-get install -y curl git jq libicu70 build-essential ca-certificates
+
+RUN install -m 0755 -d /etc/apt/keyrings && \
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && \
     chmod a+r /etc/apt/keyrings/docker.asc && \
     echo \

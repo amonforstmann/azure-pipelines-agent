@@ -4,7 +4,7 @@ ENV TARGETARCH="linux-x64"
 
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get install -y curl git jq libicu70
+RUN apt-get install -y curl git jq libicu70 build-essential
 
 WORKDIR /azp/
 

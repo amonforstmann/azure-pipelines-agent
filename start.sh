@@ -2,7 +2,6 @@
 set -e
 
 # Start the Docker daemon in the background
-print_header "Starting Docker daemon..."
 dockerd &
 
 if [ -z "${AZP_URL}" ]; then
